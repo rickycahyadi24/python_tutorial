@@ -1,12 +1,12 @@
 import pandas as pd
 
-# 1. Input
-raw_data = pd.read_csv("Menu.csv")
-print(raw_data)
-print(raw_data.info())
+# 1.Input
+raw_data=pd.read_csv("Menu.csv")
 
-# 2. Process
-raw_data.sort_values(["Menu"],axis=0,inplace=True)
+# 2.Process
+numberOfItems=len(raw_data)
+sorted_data=raw_data.sort_values("Menu",ascending=True)
 
-# 3. Output
-print(raw_data)
+# 3.Output
+print(f'#1 -> Count:{numberOfItems}')
+print(f'#2 {sorted_data}')
